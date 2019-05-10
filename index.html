@@ -244,16 +244,229 @@
 
 <!-- Mother's Day -->
 <section class="slide whiteSlide fade">
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
+  <div class="content center">
+    <div class="container center">
+      <div class="wrap center">
       
         <div class="fix-7-12">
           <h1 class="ae-1">Mother's Day</h1>
           <h2 class="ae-2">Last minute email gift cards available.</h2>
           <h3 class="ae-3">Give Mum a brisbane beauty salon gift card this Mother’s Day.</h3>
-          <a href="https://beautygifts.com.au" class="margin-top-1 button black square stroke ae-2">Book Now</a>
-          <div class="ae-3 margin-top-1"><p class="tiny"><span class="opacity-6">or call</span><a class="bold block opacity-8" href="tel:+61421202447">0421 202 447</a></p></div>
+          <div id='product-component-6a528fef3c9' class="center opacity-8"></div>
+    <script type="text/javascript">
+    /*<![CDATA[*/
+
+    (function () {
+      var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+      if (window.ShopifyBuy) {
+        if (window.ShopifyBuy.UI) {
+          ShopifyBuyInit();
+        } else {
+          loadScript();
+        }
+      } else {
+        loadScript();
+      }
+
+      function loadScript() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = scriptURL;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+        script.onload = ShopifyBuyInit;
+      }
+
+      function ShopifyBuyInit() {
+        var client = ShopifyBuy.buildClient({
+          domain: 'brisbane-salon-gift-voucher.myshopify.com',
+          storefrontAccessToken: 'd8509c822726dfbc161d66b5dc7cb557',
+        });
+
+        ShopifyBuy.UI.onReady(client).then(function (ui) {
+          ui.createComponent('product', {
+            id: [1339347107928],
+            node: document.getElementById('product-component-6a528fef3c9'),
+            moneyFormat: '%24%7B%7Bamount%7D%7D',
+            options: {
+  "product": {
+    "variantId": "all",
+    "width": "240px",
+    "contents": {
+      "imgWithCarousel": false,
+      "variantTitle": false,
+      "description": false,
+      "buttonWithQuantity": false,
+      "quantity": false
+    },
+    "text": {
+      "button": "ADD TO BASKET"
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "100%",
+          "margin-left": "0",
+          "margin-bottom": "50px"
+        }
+      },
+      "button": {
+        "background-color": "#000000",
+        ":hover": {
+          "background-color": "#000000"
+        },
+        ":focus": {
+          "background-color": "#000000"
+        }
+      },
+      "title": {
+        "color": "#000000"
+      },
+      "compareAt": {
+        "font-size": "12px"
+      }
+    }
+  },
+  "cart": {
+    "contents": {
+      "button": true
+    },
+    "text": {
+      "notice": "We will call you to confirm your booking",
+      "button": "BOOK NOW"
+    },
+    "styles": {
+      "cart": {
+        "background-color": "#795548"
+      },
+      "button": {
+        "background-color": "#000000",
+        ":hover": {
+          "background-color": "#000000"
+        },
+        ":focus": {
+          "background-color": "#000000"
+        }
+      },
+      "title": {
+        "color": "#ffffff"
+      },
+      "footer": {
+        "background-color": "#795548"
+      },
+      "header": {
+        "color": "#ffffff"
+      },
+      "lineItems": {
+        "color": "#ffffff"
+      },
+      "subtotalText": {
+        "color": "#ffffff"
+      },
+      "subtotal": {
+        "color": "#ffffff"
+      },
+      "notice": {
+        "color": "#ffffff"
+      },
+      "currency": {
+        "color": "#ffffff"
+      },
+      "close": {
+        ":hover": {
+          "color": "#ffffff"
+        },
+        "color": "#ffffff"
+      },
+      "emptyCart": {
+        "color": "#ffffff"
+      }
+    }
+  },
+  "modalProduct": {
+    "contents": {
+      "img": false,
+      "imgWithCarousel": true,
+      "variantTitle": false,
+      "buttonWithQuantity": true,
+      "button": false,
+      "quantity": false
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "100%",
+          "margin-left": "0px",
+          "margin-bottom": "0px"
+        }
+      },
+      "button": {
+        "background-color": "#000000",
+        ":hover": {
+          "background-color": "#000000"
+        },
+        ":focus": {
+          "background-color": "#000000"
+        }
+      }
+    }
+  },
+  "toggle": {
+    "styles": {
+      "toggle": {
+        "background-color": "#000000",
+        ":hover": {
+          "background-color": "#000000"
+        },
+        ":focus": {
+          "background-color": "#000000"
+        }
+      }
+    }
+  },
+  "productSet": {
+    "styles": {
+      "products": {
+        "@media (min-width: 601px)": {
+          "margin-left": "-20px"
+        }
+      }
+    }
+  },
+  "lineItem": {
+    "styles": {
+      "variantTitle": {
+        "color": "#ffffff"
+      },
+      "title": {
+        "color": "#ffffff"
+      },
+      "price": {
+        "color": "#ffffff"
+      },
+      "quantity": {
+        "color": "#ffffff"
+      },
+      "quantityIncrement": {
+        "color": "#ffffff",
+        "border-color": "#ffffff"
+      },
+      "quantityDecrement": {
+        "color": "#ffffff",
+        "border-color": "#ffffff"
+      },
+      "quantityInput": {
+        "color": "#ffffff",
+        "border-color": "#ffffff"
+      }
+    }
+  }
+}
+          });
+        });
+      }
+    })();
+    /*]]>*/
+    </script>
         </div>
                 
       </div>
