@@ -37,6 +37,20 @@
 
 <!-- Custom Styles -->
 <!-- <link href="css/custom.css" rel="stylesheet" type="text/css"> -->
+<style>
+  .slides .slide .background.vimeo iframe {
+    width: 1280px;
+    height: 720px;
+    position: absolute;
+    top: initial;
+    bottom: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+    -webkit-transform-origin: 0%;
+    transform-origin: 0%;
+  }
+</style>    
 
 <!-- jQuery 3.3.1 -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -46,6 +60,34 @@
 
 <!-- Custom Scripts -->
 <!-- <script src="js/custom.js" type="text/javascript"></script> -->
+<script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
+<script>
+  $(function() {
+    $(window).resize( function(){
+      var theWidth = $(window).width(),
+          theHeight = $(window).height(),
+          videoProportions = 16/9,
+          newWidth = (theHeight*videoProportions),
+          newHeight = (theWidth/videoProportions);
+
+      if ( (theWidth > 1280) && (newHeight > theHeight )) {
+        $('.background.vimeo iframe').css({'width':theWidth, 'height':newHeight});
+      }
+
+      if ( (theHeight > 720) && (newWidth > theWidth )) {
+        $('.background.vimeo iframe').css({'height':theHeight, 'width':newWidth});
+      }
+    }).resize();
+
+    // mute audio
+    var vimeo_iframe = $('.background.vimeo iframe')[0];
+    var player = $f(vimeo_iframe);
+
+    player.addEvent('ready', function() {
+      player.api('setVolume', 0);
+    });
+});
+</script>
     
 <script src="https://stackpile.io/stack_162004.js" async="async"></script>    
 
